@@ -1,0 +1,56 @@
+name: "User Story"
+description: "Create a user story with clear acceptance criteria"
+title: "[Story]: "
+labels: ["user story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this format: **As a [type of user], I want [goal] so that [benefit].**
+  - type: input
+    id: role
+    attributes:
+      label: As a...
+      placeholder: "student / user / admin / etc."
+    validations:
+      required: true
+  - type: input
+    id: goal
+    attributes:
+      label: I want...
+      placeholder: "what you want to do"
+    validations:
+      required: true
+  - type: input
+    id: benefit
+    attributes:
+      label: So that...
+      placeholder: "why it matters / value"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria (clear + testable)
+      description: "List specific conditions that must be met for this to be accepted."
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - [ ] Code committed and pushed
+        - [ ] PR opened
+        - [ ] PR merged
+        - [ ] No errors / works as expected
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Links (optional)
+      placeholder: "Anything else the team should know"
